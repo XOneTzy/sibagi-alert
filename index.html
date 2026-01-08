@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Pusat Alert & Interaksi</title>
+<title>Alert Give Gabungan</title>
 
 <style>
 html, body {
@@ -13,53 +13,22 @@ html, body {
     background: transparent;
     overflow: hidden;
 }
-
-/* Layer overlay (alert) */
-.overlay {
+iframe {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     border: none;
-    pointer-events: none; /* biar tidak ganggu klik */
-    z-index: 10;
-}
-
-/* Pusat interaksi (boleh diklik) */
-.interaction {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 420px;
-    height: 600px;
-    border-radius: 12px;
-    border: none;
-    background: transparent;
-    z-index: 1;
 }
 </style>
-
 </head>
 <body>
 
-<!--  SIBAGI ALERT -->
-<iframe
-class="overlay"
-src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7">
-</iframe>
+<!-- SIBAGI ALERT -->
+<iframe src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7"></iframe>
 
-<!--  SIBAGI MEDIA SHARE -->
-<iframe
-class="overlay"
-src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7">
-</iframe>
+<!-- SIBAGI MEDIA SHARE -->
+<iframe src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7"></iframe>
 
-<!-- PUSAT INTERAKSI INDOFINITY -->
-<iframe
-class="interaction"
-src="https://widgets.indofinity.com/widgets/overlay/e8841b2d-474a-4d12-804c-79a538c6e35c?screen=1">
-</iframe>
 
 </body>
 </html>
