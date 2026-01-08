@@ -2,45 +2,70 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Sibagi Alert Give</title>
+<title>Pusat Alert & Interaksi</title>
+
 <style>
-html,body{
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
-    background:transparent;
-    overflow:hidden;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
 }
-iframe{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:none;
+
+/* Layer overlay (alert) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* biar tidak ganggu klik */
+    z-index: 10;
+}
+
+/* Pusat interaksi (boleh diklik) */
+.interaction {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 420px;
+    height: 600px;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    z-index: 1;
 }
 </style>
+
 </head>
 <body>
-    
-<!-- ALERT -->
-<iframe src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7"></iframe>
 
-    
-<!-- MEDIA SHARE -->
-<iframe src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7"></iframe>
+<!-- 1️⃣ SIBAGI ALERT -->
+<iframe
+class="overlay"
+src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7">
+</iframe>
 
+<!-- 2️⃣ SIBAGI MEDIA SHARE -->
+<iframe
+class="overlay"
+src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7">
+</iframe>
 
-<!-- INDOFINITY DONATION ALERT -->
-<iframe src="https://indofinity.com/xonetzygaming"></iframe>
-   
-    
-    <!-- PUSAT INTERAKSI  -->
-<iframe src="https://widgets.indofinity.com/widgets/overlay/e8841b2d-474a-4d12-804c-79a538c6e35c?screen=1"></iframe>
-    
-    
+<!-- 3️⃣ INDOFINITY ALERT DONASI -->
+<iframe
+class="overlay"
+src="https://indofinity.com/xonetzygaming">
+</iframe>
+
+<!-- 4️⃣ PUSAT INTERAKSI INDOFINITY -->
+<iframe
+class="interaction"
+src="https://indofinity.com/xonetzygaming/dashboard">
+</iframe>
+
 </body>
-
-
 </html>
