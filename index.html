@@ -12,6 +12,15 @@ html,body{
     background:transparent;
     overflow:hidden;
 }
+/* 🎵 Music Indofinity (audio only, tersembunyi) */
+#music {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
 
 /* alert & media */
 .full{
@@ -50,6 +59,12 @@ html,body{
     allow="autoplay">
 </iframe>
 
+ <!-- 🎵 MUSIC INDOFINITY (YouTube Audio) -->
+<iframe
+    id="music"
+    src="https://widgets.indofinity.com/widgets/youtube/e8841b2d-474a-4d12-804c-79a538c6e35c"
+    allow="autoplay">   
+    
 <!-- ALERT -->
 <iframe
     id="alert"
