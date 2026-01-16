@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Sibagi + Tikfinity Overlay</title>
+<title>Sibagi + Tikfinity PRISM FIX</title>
 <style>
 html,body{
     margin:0;
@@ -12,7 +12,9 @@ html,body{
     background:transparent;
     overflow:hidden;
 }
-iframe{
+
+/* alert & media */
+.full{
     position:absolute;
     top:0;
     left:0;
@@ -21,30 +23,43 @@ iframe{
     border:none;
 }
 
-/* urutan layer */
-#alert{ z-index:1; }
-#mediashare{ z-index:2; }
-#tikfinity{ z-index:3; pointer-events:auto; }
+/* tikfinity dibatasi */
+#tikfinity{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:none;
+    pointer-events:auto;
+    z-index:1;
+}
+
+/* alert di atas */
+#alert{ z-index:2; }
+#mediashare{ z-index:3; }
 </style>
 </head>
 <body>
 
+<!-- TIKFINITY (DASAR) -->
+<iframe
+    id="tikfinity"
+    src="https://tikfinity.zerody.one/widget/topliker?cid=2514724">
+</iframe>
+
 <!-- ALERT -->
 <iframe
     id="alert"
+    class="full"
     src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7">
 </iframe>
 
 <!-- MEDIA SHARE -->
 <iframe
     id="mediashare"
+    class="full"
     src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7">
-</iframe>
-
-<!-- TAP TAP TIKFINITY -->
-<iframe
-    id="tikfinity"
-    src="https://tikfinity.zerody.one/widget/topliker?cid=2514724">
 </iframe>
 
 </body>
