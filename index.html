@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Sibagi + Tikfinity Overlay</title>
 <style>
-html, body{
+html,body{
     margin:0;
     padding:0;
     width:100%;
@@ -12,7 +12,6 @@ html, body{
     background:transparent;
     overflow:hidden;
 }
-
 iframe{
     position:absolute;
     top:0;
@@ -23,16 +22,9 @@ iframe{
 }
 
 /* urutan layer */
-#alert{
-    z-index:1;
-}
-#mediashare{
-    z-index:2;
-}
-#tikfinity{
-    z-index:1; /* sejajar dengan alert */
-    pointer-events:auto;
-}
+#alert{ z-index:1; }
+#mediashare{ z-index:2; }
+#tikfinity{ z-index:3; pointer-events:auto; }
 </style>
 </head>
 <body>
@@ -43,16 +35,16 @@ iframe{
     src="https://sibagi.com/stream/alert?id=69191c4e407c781c203836c7">
 </iframe>
 
-<!-- TIKFINITY (SEJAJAR ALERT) -->
-<iframe
-    id="tikfinity"
-    src="https://tikfinity.zerody.one/widget/topliker?cid=2514724">
-</iframe>
-
 <!-- MEDIA SHARE -->
 <iframe
     id="mediashare"
     src="https://sibagi.com/stream/mediashare?id=69191c4e407c781c203836c7">
+</iframe>
+
+<!-- TAP TAP TIKFINITY -->
+<iframe
+    id="tikfinity"
+    src="https://tikfinity.zerody.one/widget/topliker?cid=2514724">
 </iframe>
 
 </body>
